@@ -4,52 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Albero Mobilya Koltuk Tasarım</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; margin:0; padding:0;">
+<body>
 
-  <!-- Üst Kısım -->
-  <header style="background:#8B0000; color:white; padding:40px; text-align:center;">
-    <h1>Albero Mobilya Koltuk Tasarım</h1>
-    <p>Profesyonel hizmet, kaliteli işçilik</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Albero Mobilya</div>
+    <ul class="menu">
+      <li><a href="#galeri">Çalışmalarımız</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <!-- Slider -->
+  <header class="slider">
+    <div class="slide active">
+      <img src="images/websitem2.webp" alt="Koltuk Tasarım 1">
+    </div>
+    <div class="slide">
+      <img src="images/websitem3.webp" alt="Koltuk Tasarım 2">
+    </div>
+    <div class="slide">
+      <img src="images/websitem4.webp" alt="Koltuk Tasarım 3">
+    </div>
   </header>
 
-  <!-- Fotoğraflar -->
-  <section style="padding:40px;">
-    <h2 style="text-align:center; margin-top:0;">Çalışmalarımız</h2>
-
-    <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
-      <img src="images/websitem2.webp"  alt="Koltuk Fotoğrafı 2"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem3.webp"  alt="Koltuk Fotoğrafı 3"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem4.webp"  alt="Koltuk Fotoğrafı 4"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem5.jpg"   alt="Koltuk Fotoğrafı 5"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem6.webp"  alt="Koltuk Fotoğrafı 6"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem7.webp"  alt="Koltuk Fotoğrafı 7"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem8.webp"  alt="Koltuk Fotoğrafı 8"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem9.jpg"   alt="Koltuk Fotoğrafı 9"  style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem10.jpg"  alt="Koltuk Fotoğrafı 10" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem11.jpg"  alt="Koltuk Fotoğrafı 11" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem12.jpg"  alt="Koltuk Fotoğrafı 12" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem13.jpg"  alt="Koltuk Fotoğrafı 13" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem14.jpg"  alt="Koltuk Fotoğrafı 14" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem15.jpg"  alt="Koltuk Fotoğrafı 15" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem16.jpg"  alt="Koltuk Fotoğrafı 16" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
-      <img src="images/websitem17.jpg"  alt="Koltuk Fotoğrafı 17" style="max-width:300px; width:100%; height:auto; border-radius:10px;">
+  <!-- Galeri -->
+  <section id="galeri" class="galeri">
+    <h2>Çalışmalarımız</h2>
+    <div class="galeri-grid">
+      <img src="images/websitem5.jpg" alt="Koltuk 5">
+      <img src="images/websitem6.webp" alt="Koltuk 6">
+      <img src="images/websitem7.webp" alt="Koltuk 7">
+      <img src="images/websitem8.webp" alt="Koltuk 8">
+      <img src="images/websitem9.jpg" alt="Koltuk 9">
+      <img src="images/websitem10.jpg" alt="Koltuk 10">
+      <img src="images/websitem11.jpg" alt="Koltuk 11">
+      <img src="images/websitem12.jpg" alt="Koltuk 12">
+      <img src="images/websitem13.jpg" alt="Koltuk 13">
+      <img src="images/websitem14.jpg" alt="Koltuk 14">
+      <img src="images/websitem15.jpg" alt="Koltuk 15">
+      <img src="images/websitem16.jpg" alt="Koltuk 16">
+      <img src="images/websitem17.jpg" alt="Koltuk 17">
     </div>
   </section>
 
   <!-- İletişim -->
-  <section style="padding:40px; text-align:center;">
+  <section id="iletisim" class="iletisim">
     <h2>İletişim</h2>
     <p>📞 Telefon 1: <a href="tel:+905387444303">0538 744 43 03</a></p>
     <p>📞 Telefon 2: <a href="tel:+905456384550">0545 638 45 50</a></p>
     <p>🏠 Adres: Türkiye, İstanbul, Kağıthane, Hamidiye Mahallesi, Dirlik Sokak No:6</p>
   </section>
 
-  <!-- Alt Kısım -->
-  <footer style="background:#333; color:white; text-align:center; padding:20px;">
+  <!-- Footer -->
+  <footer>
     <p>&copy; 2025 Albero Mobilya Koltuk Tasarım | Tüm hakları saklıdır</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
 
@@ -58,6 +72,7 @@
 
 
  
+
 
 
 
