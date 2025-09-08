@@ -1,0 +1,67 @@
+// Yorum gönderme
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("yorum-formu");
+  const isimInput = document.getElementById("isim");
+  const yorumInput = document.getElementById("yorum");
+  const yorumListesi = document.getElementById("yorum-listesi");
+  const yildizlar = document.querySelectorAll(".yildiz");
+  let secilenYildiz = 0;
+
+  // Yıldız seçme
+  yildizlar.forEach((yildiz, index) => {
+    yildiz.addEventListener("click", () => {
+      secilenYildiz = index + 1;
+
+      yildizlar.forEach((y, i) => {
+        if (i < secilenYildiz) {
+          y.classList.add("aktif");
+        } else {
+          y.classList.remove("aktif");
+        }
+      });
+    });
+  });
+
+  // Form gönderme
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const isim = isimInput.value.trim();
+    const yorum = yorumInput.value.trim();
+
+    if (!isim) {
+      alert("Lütfen isminizi yazın!");
+      return;
+    }
+
+    if (!yorum) {
+      alert("Lütfen yorumunuzu yazın!");
+      return;
+    }
+
+    if (secilenYildiz === 0) {
+      alert("Lütfen yıldız seçin!");
+      return;
+    }
+
+    // Yeni yorum oluştur
+    const yorumDiv = document.createElement("div");
+    yorumDiv.classList.add("yorum");
+
+    const yildizHTML = "⭐".repeat(secilenYildiz);
+
+    yorumDiv.innerHTML = `
+      <p><strong>${isim}</strong> - ${yildizHTML}</p>
+      <p>${yorum}</p>
+      <hr>
+    `;
+
+    yorumListesi.prepend(yorumDiv);
+
+    // Formu temizle
+    isimInput.value = "";
+    yorumInput.value = "";
+    secilenYildiz = 0;
+    yildizlar.forEach(y => y.classList.remove("aktif"));
+  });
+});
