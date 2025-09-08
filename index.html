@@ -24,13 +24,92 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* NAVBAR GENEL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: #8B0000;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .navbar .menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Hamburger Menü */
+    .menu-toggle {
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    /* Mobil görünüm */
+    @media (max-width: 768px) {
+      .navbar .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #8B0000;
+        width: 200px;
+        padding: 10px;
+      }
+
+      .navbar .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">Albero Mobilya</div>
-    <ul class="menu">
+    <div class="menu-toggle" id="menu-toggle">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span style="font-size:16px;">Menü</span>
+    </div>
+    <ul class="menu" id="menu">
       <li><a href="#galeri">Çalışmalarımız</a></li>
       <li><a href="#yorumlar">Yorumlar</a></li>
       <li><a href="#iletisim">İletişim</a></li>
@@ -142,9 +221,19 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 
-  <script src="script.js"></script>
+  <script>
+    // Menü aç/kapa
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
+
+
 
 
 
