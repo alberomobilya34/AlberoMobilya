@@ -3,7 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Albero Mobilya Koltuk Tasarım</title>
+
+  <!-- SEO Başlık -->
+  <title>Albero Mobilya | Koltuk Döşeme, Koltuk Kılıfı Değiştirme ve Tasarım</title>
+
+  <!-- SEO Açıklama -->
+  <meta name="description" content="Albero Mobilya - İstanbul Kağıthane’de koltuk döşeme, koltuk kılıfı değiştirme ve özel tasarım koltuk hizmetleri. Kaliteli işçilik, uygun fiyat.">
+
+  <!-- SEO Anahtar Kelimeler -->
+  <meta name="keywords" content="koltuk, koltuk döşeme, koltuk kılıfı, koltuk kılıfı değiştirme, mobilya, döşemeci, Kağıthane mobilya, Albero Mobilya">
+
+  <!-- Arama Motoru Dostu -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Sosyal Medya Kartları -->
+  <meta property="og:title" content="Albero Mobilya | Koltuk Döşeme ve Tasarım">
+  <meta property="og:description" content="Koltuk döşeme, kılıf değiştirme ve özel tasarım hizmetleri. İstanbul Kağıthane.">
+  <meta property="og:image" content="images/websitem2.webp">
+  <meta property="og:url" content="https://seninsiten.com">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +32,7 @@
     <div class="logo">Albero Mobilya</div>
     <ul class="menu">
       <li><a href="#galeri">Çalışmalarımız</a></li>
+      <li><a href="#yorumlar">Yorumlar</a></li>
       <li><a href="#iletisim">İletişim</a></li>
       <li><a href="#adres">Adres</a></li>
     </ul>
@@ -35,20 +55,40 @@
   <section id="galeri" class="galeri">
     <h2>Çalışmalarımız</h2>
     <div class="galeri-grid">
-      <img src="images/websitem5.jpg" alt="Koltuk 5">
-      <img src="images/websitem6.webp" alt="Koltuk 6">
-      <img src="images/websitem7.webp" alt="Koltuk 7">
-      <img src="images/websitem8.webp" alt="Koltuk 8">
-      <img src="images/websitem9.jpg" alt="Koltuk 9">
-      <img src="images/websitem10.jpg" alt="Koltuk 10">
-      <img src="images/websitem11.jpg" alt="Koltuk 11">
-      <img src="images/websitem12.jpg" alt="Koltuk 12">
-      <img src="images/websitem13.jpg" alt="Koltuk 13">
-      <img src="images/websitem14.jpg" alt="Koltuk 14">
-      <img src="images/websitem15.jpg" alt="Koltuk 15">
-      <img src="images/websitem16.jpg" alt="Koltuk 16">
-      <img src="images/websitem17.jpg" alt="Koltuk 17">
+      <img src="images/websitem5.jpg" alt="Koltuk Döşeme Çalışması 5">
+      <img src="images/websitem6.webp" alt="Koltuk Kılıfı Değişimi 6">
+      <img src="images/websitem7.webp" alt="Modern Koltuk Döşeme 7">
+      <img src="images/websitem8.webp" alt="Koltuk Tasarım 8">
+      <img src="images/websitem9.jpg" alt="Koltuk Yenileme 9">
+      <img src="images/websitem10.jpg" alt="Koltuk Döşeme 10">
+      <img src="images/websitem11.jpg" alt="Özel Koltuk Tasarım 11">
+      <img src="images/websitem12.jpg" alt="Koltuk Tamiri 12">
+      <img src="images/websitem13.jpg" alt="Koltuk Kılıfı 13">
+      <img src="images/websitem14.jpg" alt="Koltuk Döşeme 14">
+      <img src="images/websitem15.jpg" alt="Koltuk Yenileme 15">
+      <img src="images/websitem16.jpg" alt="Koltuk Tasarımı 16">
+      <img src="images/websitem17.jpg" alt="Koltuk Döşeme 17">
     </div>
+  </section>
+
+  <!-- Yorumlar -->
+  <section id="yorumlar" class="yorumlar">
+    <h2>Müşteri Yorumları</h2>
+    <form id="comment-form">
+      <input type="text" id="name" placeholder="Adınız" required><br><br>
+      <textarea id="comment" placeholder="Yorumunuz" required></textarea><br><br>
+      <label for="rating">Puan:</label>
+      <select id="rating" required>
+        <option value="">Seçiniz</option>
+        <option value="1">⭐ 1</option>
+        <option value="2">⭐ 2</option>
+        <option value="3">⭐ 3</option>
+        <option value="4">⭐ 4</option>
+        <option value="5">⭐ 5</option>
+      </select><br><br>
+      <button type="submit">Gönder</button>
+    </form>
+    <div id="comment-list"></div>
   </section>
 
   <!-- İletişim -->
@@ -105,6 +145,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
